@@ -1,0 +1,25 @@
+name: PR title checker
+description: Validate PR title against a simple action
+
+inputs:
+  regexp:
+    description: The pattern to test the PR title against.
+    default: '^(milestone|break|feat|fix|hotfix|chore|misc|ci|docs|revert)(\(\w+\))?!?:\s([A-Z]{1,5}-[0-9]{1,}\s).+'
+    required: false
+
+  message:
+    description: The error message to display
+    default: PR title does not follow team guidelines.
+    required: false
+
+  skip_on:
+    description: The label used for skipping verification
+    required: false
+
+runs:
+  using: node12
+  main: dist/index.js
+
+branding:
+  icon: git-branch
+  color: gray-dark
