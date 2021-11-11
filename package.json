@@ -1,6 +1,6 @@
 {
   "name": "pr-checker-action",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple github action to check PR title against a regexp",
   "main": "index.js",
   "scripts": {
