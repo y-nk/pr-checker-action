@@ -14,7 +14,7 @@ const labels =
 
 const regexp =
   core.getInput('regexp') ||
-  '^(milestone|break|feat|fix|hotfix|chore|misc|ci|docs|revert)(\\(\\w+\\))?!?:\\s([A-Z]{1,5}-[0-9]{1,}\\s).+'
+  '^(epic|feat|fix|hotfix|chore|ci|docs|revert)(\\(\\w+\\))?!?:\\s([A-Z]{1,5}-[0-9]{1,}\\s).+'
 
 const message =
   core.getInput('message') || 'PR title does not follow team guidelines.'
